@@ -11,7 +11,10 @@
     <div class="row">
         <% @lists.each do |list| %>
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="raw">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <%= link_to raw('<i class="far fa-times-circle"></i>'), list_path(list), method: :delete,  class:"col-3" %>
+          </div>
           <div class="card-body">
             <h5 class="card-title"><%= list.name %></h5>
             <%= link_to 'Show', list, class: "btn" %>
